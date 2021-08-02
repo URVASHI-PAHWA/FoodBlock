@@ -1,0 +1,265 @@
+*,*::before,*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Berkshire Swash',cursive;
+  overflow-x: hidden;
+  width: 100vw;
+}
+nav{
+	background-color: orange;
+	height: 100px;
+	width: 100vw;
+}
+ul{
+	list-style: none;
+}
+li{
+	display: inline-block;
+	padding: 30px;
+}
+a{
+	text-decoration: none;
+	color: white;
+	font-size: 20px;	
+}
+li:last-of-type{
+	position: absolute;
+	right: 10px;
+}
+li:nth-of-type(3){
+	position: absolute;
+	right: 30px;
+	margin-right: 110px;
+}
+li:nth-of-type(2){
+	position: absolute;
+	right: 30px;
+	margin-right: 210px;
+}
+li:nth-of-type(1){
+	position: absolute;
+	right: 30px;
+	margin-right: 310px;
+}
+li:nth-of-type(n):hover{
+	background-color: rgba(255, 127, 80,0.6);
+}
+
+.nav-header{
+	text-align: left;
+	position: absolute;
+	left:10px;
+	font-size: 30px;
+	padding: 25px 30px;
+	color: white;
+	font-family: 'Berkshire Swash',cursive;
+	letter-spacing: 0.1em;
+}
+
+nav > .nav-btn > .nav-check{
+	display: none;
+}
+@keyframes display {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+.pic-ctn {
+  width: 100vw;
+  height: 200px;
+  position: absolute;
+  margin-top:8vh;
+  
+}
+.pic-ctn > .pic {
+  width: 40%;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  justify-content: center;
+  margin: 0 auto;
+  animation: display 10s infinite;
+  left: -9999px; 
+  right: -9999px;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
+.pic:nth-child(2) {
+  animation-delay: 2s;
+}
+.pic:nth-child(3) {
+  animation-delay: 4s;
+}
+.pic:nth-child(4) {
+  animation-delay: 6s;
+}
+.pic:nth-child(5) {
+  animation-delay: 8s;
+}
+#h1{
+	margin-top:41%;
+	color:orange;
+  word-spacing: 0.5em;
+}
+.container{
+	overflow: hidden;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 0.5fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.grid h3{
+	color: orange;
+	text-align: center;
+	padding:5px 10px;
+}
+.grid p{
+	color:lightslategray;
+	padding:10px 20px;
+}
+.grid > #art {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+.grid button{
+	border:1px solid #eee;
+	background:transparent;
+	font-size: 20px;
+	padding:10px 20px;
+}
+.grid button:hover{
+	color:white;
+	background:lightslategrey;
+	cursor: pointer;
+}
+.grid > #art #picture {
+  max-width: 100%;
+}
+
+.grid .text {
+  padding: 20px;
+}
+#head{
+	margin-top:10%;
+	color:orange;
+}
+#form{
+	padding: 100px 50px;
+	margin-top:10%;
+	overflow: hidden;
+}
+#form h1,p{
+	text-align: center;
+  color:orange;
+}
+label{
+  display:block;
+  margin:1em 0 .2em;
+  color:orange;
+}
+input, textarea{
+  display:block;
+  width:100%;
+  padding:.3em;
+  font-size:20px;
+  border:solid 2px #eee;
+  resize:vertical;
+  color:orange;
+}
+textarea{
+  min-height:180px;
+}
+input[type=checkbox]{
+  display:inline;
+  width:auto;
+}
+
+input[type=submit]{
+  background:lightcoral;
+  margin:1em 0 0;
+  color:white;
+  border:none;
+  border-radius:8px;
+  transition:all .3s ease-out;
+}
+
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover{
+  background: rgba(255, 127, 80,0.2);
+}
+
+/* hover and focus states */
+input[type=submit]:hover,
+input[type=submit]:focus{
+  background: rgba(255, 127, 80,0.7);
+  outline:none;
+}
+
+@media screen and (max-width:600px) {
+  /*  make the form 2 columns */
+  form:after{
+    content:'';
+    display:block;
+    clear:both;
+  }
+  .column{
+    width:50%;
+    padding:0.5em;
+    float:left;
+  }
+  .grid{
+  	padding: 10px 100px;
+  }
+  li:last-of-type{
+	position: absolute;
+	right: 5px;
+}
+  li:nth-of-type(3){
+	position: absolute;
+	right: 30px;
+	margin-right: 70px;
+}
+li:nth-of-type(2){
+	position: absolute;
+	right: 30px;
+	margin-right: 160px;
+}
+li:nth-of-type(1){
+	position: absolute;
+	right: 30px;
+	margin-right: 250px;
+}
+li:nth-of-type(n):hover{
+	background-color: rgba(255, 127, 80,0.6);
+}
+.nav-header{
+	left:5px;
+	padding: 25px 10px;
+}
+}
